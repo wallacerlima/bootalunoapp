@@ -30,6 +30,15 @@
 		     sh 'docker build -t bootapp:${BUILD_ID} . '
              sh 'docker run --name boot -dp 8181:8181 bootapp:${BUILD_ID} '
   			}
-  		}      
+  		}  
+
+	  stage('Performance test') {
+
+            steps {
+              sh 'jmeter -Jjmeter.save.saveservice.output_forma=xml -n -t perf_app.jmx -l Test.jtl '
+			  perfReport filterRegex: '', sourceDataFiles: 'Test.jtl'
+            }
+        }
+
     }
   }
