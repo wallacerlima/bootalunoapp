@@ -23,9 +23,10 @@
           sh " mvn verify "        
   			}
   		}
-      stage("Deploy to tomcat") {
+      stage("Deploy Docker") {
         steps {          
-          deploy adapters: [tomcat8(credentialsId: 'tomcat_cred', path: '', url: 'http://localhost:8484')], contextPath: 'bootapp', war: 'target/*.war'
+		     sh 'docker build -t bootapp:${BUILD_ID} . '
+             sh 'docker run --name -dp 8181:8181 bootapp:${BUILD_ID} '
   			}
   		}      
     }
