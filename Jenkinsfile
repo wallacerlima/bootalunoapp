@@ -26,7 +26,7 @@
       stage("Deploy Docker") {
         steps {          
 		     sh 'docker build -t bootapp:${BUILD_ID} . '
-             sh 'docker run --name -dp 8181:8181 bootapp:${BUILD_ID} '
+             sh 'docker run --name boot -dp 8181:8181 bootapp:${BUILD_ID} '
   			}
   		}      
     }
