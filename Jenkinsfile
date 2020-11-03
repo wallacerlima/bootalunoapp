@@ -35,7 +35,7 @@
 	  stage('Performance test') {
 
             steps {
-              sh 'jmeter -Jjmeter.save.saveservice.output_forma=xml -n -t perf_app.jmx -l Test.jtl '
+              sh 'jmeter -Jjmeter.save.saveservice.output_forma=xml -n -t SummaryReport.jmx -l Test.jtl '
 			  perfReport filterRegex: '', sourceDataFiles: 'Test.jtl'
             }
         }
