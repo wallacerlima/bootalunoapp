@@ -8,7 +8,7 @@
     stages {
       stage('Build') {
         steps {
-          git 'http://localhost:3000/edveloso/bootalunoapp.git'
+          git branch: 'testes', url: 'http://localhost:3000/edveloso/bootalunoapp.git'
           sh "mvn -Dmaven.test.failure.ignore=true clean package"
         }                
       }
