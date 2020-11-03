@@ -16,11 +16,7 @@
         steps {
           sh "mvn sonar:sonar -Dsonar.projectName=boot-app -Dsonar.projectKey=boot-key -Dsonar.projectVersion=$BUILD_NUMBER"
   			 }
-         post {
-           success {
-             archiveArtifacts 'target/*.war'
-           }
-         }
+         
   		}
       stage("SIT") {
         steps {
