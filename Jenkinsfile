@@ -22,7 +22,7 @@
            }
          }
   		}
-      stage("QA testes") {
+      stage("SIT") {
         steps {
           sh " mvn verify "        
   			}
