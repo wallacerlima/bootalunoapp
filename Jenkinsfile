@@ -14,7 +14,8 @@
       }
       stage("Quality analises") {
         steps {
-          sh "mvn sonar:sonar -Dsonar.projectName=boot-app -Dsonar.projectKey=boot-key -Dsonar.projectVersion=$BUILD_NUMBER"
+          //sh "mvn sonar:sonar -Dsonar.projectName=boot-app -Dsonar.projectKey=boot-key -Dsonar.projectVersion=$BUILD_NUMBER"
+            sh 'echo "sonar"'
   			 }
          
   		}
