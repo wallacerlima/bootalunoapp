@@ -26,7 +26,13 @@
   		}
       stage("Deploy Docker") {
         steps {   
-             sh 'docker stop boot && docker rm boot'
+		       try {
+	             sh 'docker stop boot && docker rm boot'
+              }
+              catch (exc) {
+                  echo 'Something failed, I should sound the klaxons!'
+              }
+
 		     sh 'docker build -t bootapp:${BUILD_ID} . '
              sh 'docker run --name boot -dp 8181:8181 bootapp:${BUILD_ID} '
   			}
