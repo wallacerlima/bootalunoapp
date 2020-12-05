@@ -30,7 +30,7 @@
 		
 		<form action='<c:url value="/salvar" />'  method="post">
 		
-		   <input  type="hidden" name="codigo" value="${aluno.id}">
+		   <input  type="hidden" name="id" value="${aluno.id}">
 		
 		   <div class="form-group" >
 		   	   <label for="nome">Nome</label>

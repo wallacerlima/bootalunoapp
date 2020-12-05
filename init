@@ -1,0 +1,10 @@
+#!/bin/bash
+
+version=$1
+
+docker stop boot 
+docker rm boot 
+mvn clean package
+docker build -t bootaluno:$version .
+docker run --name boot -dp 8181:8181 bootaluno:$version 
+docker logs -f boot
