@@ -6,17 +6,17 @@ Piramide de testes
 ![image](C:\Users\veloso\eclipse-workspace\app1\pyramid_tests.jpg)
 
 
-## Testes unitários
+## Testes unitï¿½rios
 
 Os dois tipos de
 
-### Padrão AAA (Arrange, Act, Assert) 
+### PadrÃ£o AAA (Arrange, Act, Assert) 
 
-[Referência](https://medium.com/@alamonunes/teste-unit%C3%A1rio-e-o-padr%C3%A3o-aaa-arrange-act-assert-cb81d587368a)
+[Referï¿½ncia](https://medium.com/@alamonunes/teste-unit%C3%A1rio-e-o-padr%C3%A3o-aaa-arrange-act-assert-cb81d587368a)
 
-### Padrão GTW (Given … When … Then …)
+### PadrÃ£o GTW (Given When Then)
 
-[Referência](https://medium.com/@matheus.saraujo/testes-give-when-then-3bf3fef55f5e)
+[Referï¿½ncia](https://medium.com/@matheus.saraujo/testes-give-when-then-3bf3fef55f5e)
 
 ### Abordagem tradicional 
  
@@ -25,21 +25,21 @@ Os dois tipos de
 ### Abordagem com TDD
 
 * Cria os testes
-* Implementa a lógica
+* Implementa a lï¿½gica
 * Refatora
 
-### Melhores práticas
+### Melhores prï¿½ticas
 
-- Não se testa métodos privados
-- Testando exceções
-- Métodos BeforeEach, AfterEach, BeforeAll, AfterAll  
+- Nï¿½o se testa mï¿½todos privados
+- Testando exceï¿½ï¿½es
+- Mï¿½todos BeforeEach, AfterEach, BeforeAll, AfterAll  
 
 
 ### Mockito
 
 [referencia](https://site.mockito.org/)
 
-[documentação](https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html)
+[documentaï¿½ï¿½o](https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html)
 
 * init()
 * mock()
@@ -68,7 +68,7 @@ maven
 ```
 
 
-## Testes de integração 
+## Testes de integraï¿½ï¿½o 
 
 
 
