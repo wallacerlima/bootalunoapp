@@ -29,9 +29,6 @@ class AlunoControllerListTest {
 		MockitoAnnotations.initMocks(this);
 	}
 	
-	
-	
-	
 	@Test
 	public void teste() {
 		
