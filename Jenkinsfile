@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {                
-                git 'https://github.com/edveloso/bootalunoapp.git'       
+                git branch: 'finalize', url: 'https://github.com/edveloso/bootalunoapp.git'       
                 bat "mvn clean package"
             }
 
@@ -27,5 +27,12 @@ pipeline {
             }
             
         }
+       stage('Verify') {
+            steps {
+                bat 'mvn verify'
+                }
+            
+        }
+        
     }
 }
