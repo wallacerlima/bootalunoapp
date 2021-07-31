@@ -18,7 +18,11 @@ public class AlunoService {
 	private AlunoRepository alunoRepositorio;
 	final static Logger logger = LoggerFactory.getLogger(AlunoService.class);
 
-	
+//	@Autowired
+//	public AlunoService(AlunoRepository alunoRepositorio) {
+//		this.alunoRepositorio = alunoRepositorio;
+//	}
+//	
 	
 	public AlunoService() {
 		logger.debug("entrou...");
