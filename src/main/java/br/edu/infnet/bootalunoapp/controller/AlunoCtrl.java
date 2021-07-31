@@ -45,6 +45,7 @@ public class AlunoCtrl {
 		model.addAttribute("aluno", aluno);
 		model.addAttribute("tipoForm", "Editar");
 		return "alunos/form";
+		
 	}
 	
 

@@ -1,8 +1,13 @@
 package br.edu.infnet.bootalunoapp.modelo;
 
+import java.util.List;
+
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 
 
 
@@ -16,6 +21,9 @@ public class Aluno {
 	private String nome;
 	
 	private String email;
+
+	@ManyToMany
+	private List<Turma> turmas;
 
 	public Aluno() {
 	}
@@ -46,6 +54,15 @@ public class Aluno {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	
+	public List<Turma> getTurmas() {
+		return turmas;
+	}
+
+	public void setTurmas(List<Turma> turmas) {
+		this.turmas = turmas;
 	}
 	
 	
