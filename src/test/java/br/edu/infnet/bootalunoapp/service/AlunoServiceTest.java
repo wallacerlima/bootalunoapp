@@ -1,9 +1,14 @@
 package br.edu.infnet.bootalunoapp.service;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.mockito.Mockito.doReturn;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
+import java.util.Arrays;
+
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;
@@ -44,10 +49,31 @@ public class AlunoServiceTest {
 		
 		//verifique
 		assertNotNull(alunoSalvo);
-		assertEquals(1, aluno.getId());
+		
+		Assert.assertEquals(Integer.valueOf(1), aluno.getId() );
 		
 		
 	}
+	
+	@Test
+	public void deveriaRetornar2Alunos() {
+
+		Aluno aluno1 = new Aluno();
+		aluno1.setId(1);
+		
+		Aluno aluno2 = new Aluno();
+		aluno2.setId(2);
+        
+		doReturn(Arrays.asList(aluno1, aluno2)).when(repo).findAll();
+
+        java.util.List<Aluno> alunos = service.listAll();
+        
+
+        Assert.assertEquals(2, alunos.size());
+   
+		
+	}
+	
 	
 //	
 //	@Test
