@@ -27,5 +27,15 @@ pipeline {
             }
             
         }
+        
+        stage('SIT') {
+            steps {
+               
+               bat 'mvn verify'
+               
+               }
+            
+        }
+        
     }
 }
