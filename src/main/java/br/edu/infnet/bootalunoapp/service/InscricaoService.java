@@ -35,6 +35,10 @@ public class InscricaoService {
 		turmaRepo.save(turma);
 		alunoRepo.save(aluno);
 		
+		System.out.println(aluno);
+		
+		
+		
 	}
 
 }

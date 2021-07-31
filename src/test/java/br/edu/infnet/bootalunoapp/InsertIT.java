@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class InsertIT {
 
@@ -21,8 +21,10 @@ public class InsertIT {
 
 	@BeforeEach
 	public void setUp() {
-		driver = new ChromeDriver();
-		js = (JavascriptExecutor) driver;
+		System.setProperty("webdriver.gecko.driver","C:\\Users\\veloso\\workspaces\\selenium\\geckodriver.exe");
+
+		driver = new FirefoxDriver();
+//		js = (JavascriptExecutor) driver;
 		vars = new HashMap<String, Object>();
 	}
 
@@ -43,7 +45,6 @@ public class InsertIT {
 		driver.findElement(By.cssSelector(".btn-primary")).click();
 		
 		assertTrue(driver.getPageSource().contains("godofredo"));
-		
 		
 	}
 }

@@ -64,6 +64,11 @@ public class Aluno {
 	public void setTurmas(List<Turma> turmas) {
 		this.turmas = turmas;
 	}
+
+	@Override
+	public String toString() {
+		return "Aluno [id=" + id + ", nome=" + nome + ", email=" + email + ", turmas=" + turmas + "]";
+	}
 	
 	
 }
