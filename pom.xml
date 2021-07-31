@@ -61,6 +61,7 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 			<exclusions>
+			
 				<exclusion>
 					<groupId>org.junit.vintage</groupId>
 					<artifactId>junit-vintage-engine</artifactId>
@@ -75,6 +76,7 @@
 					<artifactId>mockito-junit-jupiter</artifactId>
 					<groupId>org.mockito</groupId>
 				</exclusion>
+				
 			</exclusions>
 		</dependency>
 
