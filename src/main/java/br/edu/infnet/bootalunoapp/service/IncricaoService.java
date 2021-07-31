@@ -11,7 +11,7 @@ import br.edu.infnet.bootalunoapp.repository.TurmaRepository;
 @Service
 public class IncricaoService {
 
-
+ 
 	private AlunoRepository alunoRepo;
 	private TurmaRepository turmaRepo;
 
