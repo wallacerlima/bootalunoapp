@@ -27,7 +27,7 @@
 		</div>
 
 		<div class="d-flex justify-content-between">
-			<h1>Listagem de alunos</h1>
+			<h1>Lista de alunos</h1>
 			<h3>
 				<a class="btn btn-primary" href='<c:url value="/cadastro" />'> Cadastrar novo aluno </a>
 			</h3>
