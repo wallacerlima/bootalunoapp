@@ -25,7 +25,7 @@ public class IntegrationIT {
 		
 		driver.findElement( By.cssSelector(".btn-primary") ).click();
 		
-		assertTrue( driver.getPageSource().contains("severino@gmail.com")  );
+		assertTrue( driver.getPageSource().contains("antonio@gmail.com")  );
 		
 		driver.close();
 		
