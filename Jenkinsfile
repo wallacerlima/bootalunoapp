@@ -8,33 +8,14 @@ pipeline {
     stages {
         stage('Build') {
             steps {                
-                git 'https://github.com/edveloso/bootalunoapp.git'       
+                git 'https://github.com/wallacerlima/alunoapp.git'       
                 bat "mvn clean package"
             }
-
-            post {
-                // If Maven was able to run the tests, even if some of the test
-                // failed, record the test results and archive the jar file.
-                success {
-                    junit '**/target/surefire-reports/TEST-*.xml'
-                    archiveArtifacts 'target/*.war'
-                }
-            }
-        }
-        stage('Deploy to tomcat') {
-            steps {
-                deploy adapters: [tomcat8(credentialsId: 'TOMCAT-DEPLOYER', path: '', url: 'http://localhost:8484')], contextPath: 'bootaluno', war: 'target/*.war'
-            }
-            
         }
         
-        stage('SIT') {
-            steps {
-               
-               bat 'mvn verify'
-               
-               }
-            
+        stage('Deploy') {
+            // Deploy to Tomcat
+            deploy adapters: [tomcat8(credentialsId: '8cea677d-6ba0-4802-ab49-f624207cfdef', path: '', url: 'http://ec2-54-94-171-77.sa-east-1.compute.amazonaws.com:8080/')], contextPath: 'alunoapp', war: 'target/alunoapp.war'
         }
         
     }
